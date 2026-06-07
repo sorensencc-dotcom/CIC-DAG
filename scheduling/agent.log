@@ -1,0 +1,23 @@
+[2026-06-07 17:46:28] [INFO] Task Scheduler Agent started (mode: validate)
+[2026-06-07 17:46:28] [OK] ✓ cic-weekly-ops: script found
+[2026-06-07 17:46:28] [OK] ✓ cic-marketing-curation: script found
+[2026-06-07 17:46:28] [ERROR] ✗ cic-stability-soak: script not found at C:\CIC_MEDIA_LIBRARY\CIC\scripts\run-stability-test.ps1
+[2026-06-07 17:46:28] [ERROR] ✗ family-history-sync: script not found at C:\family-history-business\scripts\sync-client-outputs.ps1
+[2026-06-07 17:46:28] [OK] ✓ automation-audit: script found
+[2026-06-07 17:46:28] [OK] ✓ interview-ingest-scheduled: script found
+[2026-06-07 17:46:28] [OK] ✓ drive-metadata-sync: script found
+[2026-06-07 17:46:28] [INFO] Validation: 5/7 tasks valid
+[2026-06-07 17:46:28] [INFO] Agent completed
+[2026-06-07 17:52:46] [INFO] Task Scheduler Agent started (mode: validate)
+[2026-06-07 17:52:46] [OK] ✓ cic-weekly-ops: script found
+[2026-06-07 17:52:46] [OK] ✓ cic-marketing-curation: script found
+[2026-06-07 17:52:46] [ERROR] ✗ cic-stability-soak: script not found at C:\CIC_MEDIA_LIBRARY\CIC\scripts\run-stability-test.ps1
+[2026-06-07 17:52:46] [ERROR] ✗ family-history-sync: script not found at C:\family-history-business\scripts\sync-client-outputs.ps1
+[2026-06-07 17:52:46] [OK] ✓ automation-audit: script found
+[2026-06-07 17:52:46] [OK] ✓ interview-ingest-scheduled: script found
+[2026-06-07 17:52:46] [OK] ✓ drive-metadata-sync: script found
+[2026-06-07 17:52:46] [OK] ✓ generate-reports: script found
+[2026-06-07 17:52:46] [OK] ✓ validate-configuration: script found
+[2026-06-07 17:52:46] [OK] ✓ generate-changelog: script found
+[2026-06-07 17:52:46] [INFO] Validation: 8/10 tasks valid
+[2026-06-07 17:52:46] [INFO] Agent completed

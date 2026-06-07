@@ -1,0 +1,235 @@
+{
+  "tasks": [
+    {
+      "id": "cic-weekly-ops",
+      "name": "CIC Weekly Operations",
+      "description": "Follow-ops assessment + marketing curation refresh",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\CIC\\scripts\\cic-follow-ops.ps1",
+      "schedule": "weekly",
+      "day_of_week": "Monday",
+      "time": "08:00",
+      "dependencies": [],
+      "timeout_minutes": 30,
+      "retry_policy": {
+        "max_retries": 2,
+        "retry_delay_minutes": 5
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "cic-marketing-curation",
+      "name": "CIC Marketing Curation",
+      "description": "Curate social media calendar, pitch deck assets, grant bundles",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\CIC\\scripts\\curate-cic-marketing-assets.ps1",
+      "schedule": "weekly",
+      "day_of_week": "Monday",
+      "time": "08:30",
+      "dependencies": ["cic-weekly-ops"],
+      "timeout_minutes": 30,
+      "retry_policy": {
+        "max_retries": 2,
+        "retry_delay_minutes": 5
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "cic-stability-soak",
+      "name": "CIC Stability Soak Test",
+      "description": "12-hour soak test with PM2 + systemd + Grafana monitoring",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\CIC\\scripts\\run-stability-test.ps1",
+      "schedule": "weekly",
+      "day_of_week": "Saturday",
+      "time": "20:00",
+      "dependencies": [],
+      "timeout_minutes": 720,
+      "retry_policy": {
+        "max_retries": 0,
+        "retry_delay_minutes": 0
+      },
+      "notifications": {
+        "on_success": true,
+        "on_failure": true,
+        "email": "sorensencc@gmail.com"
+      },
+      "enabled": false,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "family-history-sync",
+      "name": "Family History Business Sync",
+      "description": "Sync genealogy pipeline outputs to client-ready format",
+      "script": "C:\\family-history-business\\scripts\\sync-client-outputs.ps1",
+      "schedule": "daily",
+      "time": "02:00",
+      "dependencies": [],
+      "timeout_minutes": 120,
+      "retry_policy": {
+        "max_retries": 1,
+        "retry_delay_minutes": 15
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": false,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "automation-audit",
+      "name": "Repository Automation Audit",
+      "description": "Scan codebase for tasks that should be automated (logs, backups, reports, pipelines, health checks)",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\scan-automation-opportunities.ps1",
+      "schedule": "weekly",
+      "day_of_week": "Sunday",
+      "time": "22:00",
+      "dependencies": [],
+      "timeout_minutes": 30,
+      "retry_policy": {
+        "max_retries": 1,
+        "retry_delay_minutes": 10
+      },
+      "notifications": {
+        "on_success": true,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "interview-ingest-scheduled",
+      "name": "Interview Ingest Pipeline",
+      "description": "Run interview data ingestion pipeline daily (HEIC→JPEG, classify, organize)",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\tasks\\run-interview-ingest.ps1",
+      "schedule": "daily",
+      "time": "03:00",
+      "dependencies": [],
+      "timeout_minutes": 60,
+      "retry_policy": {
+        "max_retries": 2,
+        "retry_delay_minutes": 10
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "drive-metadata-sync",
+      "name": "Drive Metadata Sync",
+      "description": "Daily sync of inventory, search index, and operations reports to Google Drive backup",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\tasks\\sync-inventory-to-drive.ps1",
+      "schedule": "daily",
+      "time": "04:00",
+      "dependencies": [],
+      "timeout_minutes": 30,
+      "retry_policy": {
+        "max_retries": 1,
+        "retry_delay_minutes": 15
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "generate-reports",
+      "name": "Generate Operational Reports",
+      "description": "Auto-generate inventory summary, topic breakdown, quality distribution, and rights clearance reports",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\tasks\\generate-reports.ps1",
+      "schedule": "daily",
+      "time": "05:00",
+      "dependencies": [],
+      "timeout_minutes": 30,
+      "retry_policy": {
+        "max_retries": 1,
+        "retry_delay_minutes": 10
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "validate-configuration",
+      "name": "Validate Configuration & Schema",
+      "description": "Daily health check: validate all JSON configs, CSV files, and directory structure",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\tasks\\validate-configuration.ps1",
+      "schedule": "daily",
+      "time": "06:00",
+      "dependencies": [],
+      "timeout_minutes": 15,
+      "retry_policy": {
+        "max_retries": 1,
+        "retry_delay_minutes": 10
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    },
+    {
+      "id": "generate-changelog",
+      "name": "Generate Changelog",
+      "description": "Weekly auto-generation of project changelog from git history (or mock changelog from phases)",
+      "script": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\tasks\\generate-changelog.ps1",
+      "schedule": "weekly",
+      "day_of_week": "Sunday",
+      "time": "23:00",
+      "dependencies": [],
+      "timeout_minutes": 20,
+      "retry_policy": {
+        "max_retries": 1,
+        "retry_delay_minutes": 5
+      },
+      "notifications": {
+        "on_success": false,
+        "on_failure": true,
+        "email": ""
+      },
+      "enabled": true,
+      "last_run": null,
+      "last_status": null
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-06-07T17:30:00Z",
+    "updated": "2026-06-07T17:30:00Z",
+    "registry_path": "C:\\CIC_MEDIA_LIBRARY\\scheduling\\task-registry.json"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "by_category": {
+    "pipeline_automation": 1,
+    "data_sync": 1,
+    "health_check": 1,
+    "report_generation": 4,
+    "versioning": 1
+  },
+  "total_opportunities": 8,
+  "opportunities": [
+    {
+      "category": "report_generation",
+      "task": "Auto-generate: bulk_ingest_report_2026-06-07-160008.json",
+      "estimated_effort_minutes": 25,
+      "priority": "medium",
+      "automation_type": "scheduled_report",
+      "suggested_frequency": "weekly",
+      "details": "Last updated: 0 days ago, size: 0 KB",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\CIC\\logs\\bulk_ingest_report_2026-06-07-160008.json"
+    },
+    {
+      "category": "report_generation",
+      "task": "Auto-generate: bulk_ingest_report_2026-06-07-160100.json",
+      "estimated_effort_minutes": 25,
+      "priority": "medium",
+      "automation_type": "scheduled_report",
+      "suggested_frequency": "weekly",
+      "details": "Last updated: 0 days ago, size: 1 KB",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\CIC\\logs\\bulk_ingest_report_2026-06-07-160100.json"
+    },
+    {
+      "category": "report_generation",
+      "task": "Auto-generate: bulk_ingest_report_2026-06-07-160203.json",
+      "estimated_effort_minutes": 25,
+      "priority": "medium",
+      "automation_type": "scheduled_report",
+      "suggested_frequency": "weekly",
+      "details": "Last updated: 0 days ago, size: 1 KB",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\CIC\\logs\\bulk_ingest_report_2026-06-07-160203.json"
+    },
+    {
+      "category": "report_generation",
+      "task": "Auto-generate: master_media_inventory.csv",
+      "estimated_effort_minutes": 25,
+      "priority": "medium",
+      "automation_type": "scheduled_report",
+      "suggested_frequency": "weekly",
+      "details": "Last updated: 0 days ago, size: 94 KB",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\CIC\\metadata\\master_media_inventory.csv"
+    },
+    {
+      "category": "health_check",
+      "task": "Validate configuration and schema files",
+      "estimated_effort_minutes": 30,
+      "priority": "medium",
+      "automation_type": "scheduled_validation",
+      "suggested_frequency": "daily",
+      "details": "Config files: 1, Schema files: 0",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\metadata"
+    },
+    {
+      "category": "versioning",
+      "task": "Auto-generate changelog from git",
+      "estimated_effort_minutes": 20,
+      "priority": "medium",
+      "automation_type": "scheduled_changelog",
+      "suggested_frequency": "weekly",
+      "details": "Track changes for Phase tracking and documentation",
+      "path": "C:\\CIC_MEDIA_LIBRARY"
+    },
+    {
+      "category": "pipeline_automation",
+      "task": "Schedule execution of: interview-ingest.ps1",
+      "estimated_effort_minutes": 20,
+      "priority": "high",
+      "automation_type": "scheduled_pipeline",
+      "suggested_frequency": "daily",
+      "details": "Script contains manual execution notes",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\CIC\\scripts\\interview-ingest.ps1"
+    },
+    {
+      "category": "data_sync",
+      "task": "Sync metadata and inventory between local and Drive",
+      "estimated_effort_minutes": 35,
+      "priority": "high",
+      "automation_type": "scheduled_sync",
+      "suggested_frequency": "daily",
+      "details": "Ensures consistency between source of truth and backup",
+      "path": "C:\\CIC_MEDIA_LIBRARY\\metadata"
+    }
+  ],
+  "scan_timestamp": "2026-06-07T17:43:30Z",
+  "by_priority": {
+    "low": 0,
+    "high": 2,
+    "medium": 6
+  },
+  "repository": "C:\\CIC_MEDIA_LIBRARY"
+}

@@ -1,0 +1,40 @@
+[2026-06-07 17:52:26] [INFO] ========== CONFIGURATION VALIDATION START ==========
+[2026-06-07 17:52:26] [INFO] Repository: C:\CIC_MEDIA_LIBRARY
+[2026-06-07 17:52:26] [INFO] Validating configuration files...
+[2026-06-07 17:52:26] [INFO] 
+[2026-06-07 17:52:26] [INFO] Checking: task-registry.json
+[2026-06-07 17:52:26] [OK]   ✓ File exists (6.8 KB)
+[2026-06-07 17:52:26] [OK]   ✓ Valid JSON syntax
+[2026-06-07 17:52:26] [OK]   ✓ Task registry structure valid
+[2026-06-07 17:52:26] [INFO]     Tasks defined: 10
+[2026-06-07 17:52:27] [WARN]     ⚠ Script not found: run-stability-test.ps1
+[2026-06-07 17:52:27] [WARN]     ⚠ Script not found: sync-client-outputs.ps1
+[2026-06-07 17:52:27] [INFO] 
+[2026-06-07 17:52:27] [INFO] Checking: master_media_inventory.csv
+[2026-06-07 17:52:27] [ERROR]   ✗ FILE NOT FOUND
+[2026-06-07 17:52:27] [INFO] 
+[2026-06-07 17:52:27] [INFO] Checking: folder_to_topic_mapping.json
+[2026-06-07 17:52:27] [ERROR]   ✗ FILE NOT FOUND
+[2026-06-07 17:52:27] [INFO] 
+[2026-06-07 17:52:27] [INFO] Validating directory structure...
+[2026-06-07 17:52:27] [ERROR]   ✗ Missing: metadata
+[2026-06-07 17:52:27] [OK]   ✓ scheduling
+[2026-06-07 17:52:27] [OK]   ✓ tasks
+[2026-06-07 17:52:27] [OK]   ✓ reports
+[2026-06-07 17:52:27] [OK]   ✓ scheduled_runs
+[2026-06-07 17:52:27] [INFO] 
+[2026-06-07 17:52:27] [OK] ========== VALIDATION SUMMARY ==========
+[2026-06-07 17:52:27] [OK] Valid items: 1
+[2026-06-07 17:52:27] [ERROR] Invalid items: 3
+[2026-06-07 17:52:27] [WARN] Warnings: 2
+[2026-06-07 17:52:27] [INFO] Duration: 0 seconds
+[2026-06-07 17:52:27] [INFO] 
+[2026-06-07 17:52:27] [WARN] Warnings:
+[2026-06-07 17:52:27] [WARN]   ⚠ Script not found: C:\CIC_MEDIA_LIBRARY\CIC\scripts\run-stability-test.ps1
+[2026-06-07 17:52:27] [WARN]   ⚠ Script not found: C:\family-history-business\scripts\sync-client-outputs.ps1
+[2026-06-07 17:52:27] [INFO] 
+[2026-06-07 17:52:27] [ERROR] Errors:
+[2026-06-07 17:52:27] [ERROR]   ✗ Missing: master_media_inventory.csv
+[2026-06-07 17:52:27] [ERROR]   ✗ Missing: folder_to_topic_mapping.json
+[2026-06-07 17:52:27] [ERROR]   ✗ Missing directory: C:\CIC_MEDIA_LIBRARY\metadata
+[2026-06-07 17:52:27] [OK] ========== COMPLETE ==========
